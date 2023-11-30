@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      button {
+        padding: 30px 170px;
+        background-color: royalblue;
+        color: aliceblue;
+        font-size: 2em;
+        cursor: pointer;
+        margin-top: 90px;
+        border-radius: 9px;
+        user-select: none;
+      }
+      /* No additional class needed in this example */
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="submit" id="myButton">Submit</button>
+    <script>
+      let btn = document.getElementById("myButton");
+      let rotated = false;
+
+      btn.addEventListener("click", function () {
+        // Toggle rotation using the transform property
+        rotated = !rotated;
+        btn.style.transform = rotated ? "rotate(10deg)" : "rotate(-10deg)";
+      });
+    </script>
+  </body>
+</html>
